@@ -54,7 +54,7 @@ const CharList = (props) => {
       }
 
       return (
-        <li className="char__item"
+        <li className='char__item'
             tabIndex={0}
             ref={el => itemRefs.current[i] = el}
             key={item.id}
@@ -63,13 +63,13 @@ const CharList = (props) => {
               focusOnItem(i);
             }}>
           <img src={item.thumbnail} alt={item.name} style={imgStyle}/>
-          <div className="char__name">{item.name}</div>
+          <div className='char__name'>{item.name}</div>
         </li>
     )
   });
 
     return (
-      <ul className="char__grid">
+      <ul className='char__grid'>
         {items}
       </ul>
     )
@@ -81,16 +81,16 @@ const CharList = (props) => {
     const spinner = loading && !newItemLoading ? <Spinner/> : null;
 
     return (
-      <div className="char__list">
+      <div className='char__list'>
         {errorMessage}
         {spinner}
         {items}
           <button 
-            className="button button__main button__long"
+            className='button button__main button__long'
             disabled={newItemLoading}
             style={{'display': charEnded ? 'none' : 'block'}}
             onClick={() => onRequest(offset)}>
-            <div className="inner">load more</div>
+            <div className='inner'>load more</div>
           </button>
       </div>
     )

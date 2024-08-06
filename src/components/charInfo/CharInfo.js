@@ -38,7 +38,7 @@ const CharInfo = (props) => {
   const content = !(loading || error || !char) ? <View char={char}/> : null;
 
   return (
-    <div className="char__info">
+    <div className='char__info'>
       {skeleton}
       {errorMessage}
       {spinner}
@@ -57,28 +57,28 @@ const View = ({char}) => {
 
   return (
     <>
-      <div className="char__basics">
+      <div className='char__basics'>
         <img src={thumbnail} alt={name} style={imgStyle}/>
         <div>
-          <div className="char__info-name">{name}</div>
-          <div className="char__btns">
-            <a href={homepage} className="button button__main">
-              <div className="inner">homepage</div>
+          <div className='char__info-name'>{name}</div>
+          <div className='char__btns'>
+            <a href={homepage} className='button button__main'>
+              <div className='inner'>homepage</div>
             </a>
-            <a href={wiki} className="button button__secondary">
-              <div className="inner">Wiki</div>
+            <a href={wiki} className='button button__secondary'>
+              <div className='inner'>Wiki</div>
             </a>
           </div>
         </div>
       </div>
-      <div className="char__descr">{description}</div>
-      <div className="char__comics">Comics:</div>
-      <ul className="char__comics-list">
+      <div className='char__descr'>{description}</div>
+      <div className='char__comics'>Comics:</div>
+      <ul className='char__comics-list'>
         {comics.length > 0 ? null : 'There is no comics with this character'}
         {
           comics.map((item, i) => {
             return (
-              <li key={i} className="char__comics-item">
+              <li key={i} className='char__comics-item'>
                 {item.name}
               </li>
             )
